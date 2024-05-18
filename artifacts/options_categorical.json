@@ -1,0 +1,33 @@
+{
+    "Industry": [
+        "CommunicationServices",
+        "ConsumerDiscretionary",
+        "ConsumerStaples",
+        "Education",
+        "Energy",
+        "Financials",
+        "Healthcare",
+        "Industrials",
+        "InformationTechnology",
+        "Materials",
+        "Real Estate",
+        "Research",
+        "Transport",
+        "Utilities"
+    ],
+    "Ethnicity": [
+        "Asian",
+        "Black",
+        "Latino",
+        "Other",
+        "White"
+    ],
+    "Gender": [
+        "Female",
+        "Male"
+    ],
+    "CivilStatus": [
+        "Married",
+        "Other"
+    ]
+}

@@ -1,0 +1,9 @@
+.ipynb_checkpoints
+.env
+__pycache__
+.DS_Store
+.solutions
+tutorial*
+video*
+archive*
+sketch
