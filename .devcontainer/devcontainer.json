@@ -1,0 +1,48 @@
+{
+  "image": "mcr.microsoft.com/vscode/devcontainers/python:0-3.11-bullseye",
+  "hostRequirements": {
+    "cpus": 4
+  },
+  "waitFor": "onCreateCommand",
+  "updateContentCommand": "python -m pip install -r requirements.txt && python -m pip install ruff",
+  "postCreateCommand": "python -m ipykernel install --user --name devcontainer-kernel --display-name 'Python (devcontainer)'",
+  "onCreateCommand": "echo PS1='\"$ \"' >> ~/.bashrc", //Set Terminal Prompt to $
+  "customizations": {
+    "codespaces": {
+      "openFiles": []
+    },
+    "vscode": {
+      "extensions": [
+        "ms-toolsai.jupyter",
+        "ms-python.python",
+        "bierner.docs-view",
+        "christian-kohler.path-intellisense",
+        "ms-python.vscode-pylance",
+        "ms-toolsai.vscode-jupyter-slideshow",
+        "ms-toolsai.jupyter-renderers",
+        "ms-toolsai.jupyter-keymap",
+        "ms-toolsai.vscode-jupyter-cell-tags",
+        "dracula-theme.theme-dracula",
+        "charliermarsh.ruff",
+        "VisualStudioExptTeam.vscodeintellicode",
+        "GitHub.github-vscode-theme"
+      ],
+      "settings": {
+        "workbench.colorTheme": "GitHub Dark Default",
+        "python.defaultInterpreterPath": "/usr/local/bin/python",
+        "python.linting.enabled": true,
+        "python.linting.pylintEnabled": false, // Disable other linters
+        "python.linting.flake8Enabled": false,
+        "python.linting.ruffEnabled": true, // Enable ruff
+        "python.linting.ruffPath": "/usr/local/bin/ruff", // Path to ruff
+        "github.copilot": {
+          "enabled": false // Disable GitHub Copilot
+        },
+        "jupyter.jupyterServer.kernel": "devcontainer-kernel", // Default kernel for Jupyter
+        "jupyter.notebook.defaultKernel": "devcontainer-kernel", // Default kernel for notebooks
+        "python.pythonPath": "/usr/local/bin/python", // Default Python path
+      },
+      "remoteUser": "vscode"
+    }
+  }
+}
